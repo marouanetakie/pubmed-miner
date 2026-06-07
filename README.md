@@ -46,3 +46,13 @@ The script respects NCBI's rate limit (≤ 3 requests/second without an API key)
 To increase throughput, register for a free NCBI API key at
 <https://www.ncbi.nlm.nih.gov/account/> and add it as the `api_key` parameter
 in the request calls, which raises the limit to 10 req/s.
+
+## Author
+
+| | |
+|---|---|
+| **Name** | Marouane Takie |
+| **Affiliation** | PhD Candidate \| Physiology, Pharmacology & Phytochemistry |
+| **Institution** | Université Sidi Mohamed Ben Abdellah (USMBA), Fès, Morocco |
+| **ORCID** | [0009-0009-8621-8548](https://orcid.org/0009-0009-8621-8548) |
+| **GitHub** | [github.com/marouanetakie](https://github.com/marouanetakie) |

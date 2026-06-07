@@ -1,6 +1,12 @@
 """
 PubMed Miner — fetches article metadata for a set of research queries
 and exports everything to a timestamped Excel workbook.
+
+Author:      Marouane Takie
+Affiliation: PhD Candidate | Physiology, Pharmacology & Phytochemistry
+Institution: Université Sidi Mohamed Ben Abdellah (USMBA), Fès, Morocco
+ORCID:       0009-0009-8621-8548
+GitHub:      github.com/marouanetakie
 """
 
 import time
