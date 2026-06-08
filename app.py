@@ -1,5 +1,5 @@
 """
-PubMed Miner — Streamlit Web Interface
+LitMiner — Streamlit Web Interface
 Imports search, scoring, and export functions directly from pubmed_miner.py.
 
 Author:      Marouane Takie
@@ -42,7 +42,7 @@ from pubmed_miner import (
 # ---------------------------------------------------------------------------
 
 st.set_page_config(
-    page_title="PubMed Miner",
+    page_title="LitMiner",
     page_icon="🔬",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -441,7 +441,7 @@ with st.sidebar:
 
     st.divider()
     st.caption(
-        "**PubMed Miner v3.1**\n\n"
+        "**LitMiner v3.1**\n\n"
         "[GitHub ↗](https://github.com/marouanetakie/pubmed-miner)  ·  "
         "[NCBI E-utilities](https://www.ncbi.nlm.nih.gov/books/NBK25500/)  ·  "
         "[Europe PMC API](https://europepmc.org/RestfulWebService)"
@@ -452,10 +452,9 @@ with st.sidebar:
 # Main — title & search inputs
 # ---------------------------------------------------------------------------
 
-st.title("🔬 PubMed Literature Miner")
+st.title("🔬 LitMiner")
 st.caption(
-    "Multi-source biomedical search with relevance scoring, AI extraction, "
-    "and one-click export to Excel · BibTeX · RIS."
+    "Search PubMed & Europe PMC · Score relevance · Export to Excel, BibTeX, RIS · 100% Free"
 )
 
 q_col, kw_col = st.columns([3, 2], gap="medium")

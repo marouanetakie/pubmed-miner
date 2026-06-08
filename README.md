@@ -1,4 +1,7 @@
-# PubMed Miner v3.0
+# LitMiner
+
+## 🌐 Live Web App
+👉 https://pubmed-miner.streamlit.app
 
 Automated literature retrieval from **PubMed** and **Europe PMC** with relevance scoring,
 SQLite caching, Claude AI structured extraction, BibTeX/RIS export, and publication charts.
