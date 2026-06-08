@@ -4,16 +4,16 @@
 👉 https://pubmed-miner.streamlit.app
 
 Automated literature retrieval from **PubMed** and **Europe PMC** with relevance scoring,
-SQLite caching, Claude AI structured extraction, BibTeX/RIS export, and publication charts.
+SQLite caching, free AI structured extraction (Groq / Gemini), BibTeX/RIS export, and publication charts.
 No API key required (optional for higher throughput).
 
-## What's new in v3.0
+## What's new in v3.1 — LitMiner
 
 | Feature | Detail |
 |---|---|
 | **Europe PMC dual-source** | `--source both` fetches from PubMed *and* Europe PMC simultaneously; DOI-based cross-source deduplication merges overlapping records |
 | **SQLite result cache** | All fetched records persist in `pubmed_cache.db` — re-runs are instant for already-fetched PMIDs; `--no-cache` forces a fresh fetch |
-| **Claude AI extraction** | `--ai-extract` calls `claude-haiku-4-5` to extract species, compounds, activities, key quantitative results, and study type from each abstract |
+| **Free AI extraction** | `--ai-analysis` calls Groq (Llama 3.3 70B) or Google Gemini to extract species, compounds, IC50 values, methods, and relevance to your research. 100% free — no paid API required. |
 | **BibTeX / RIS export** | `--export-bibtex` and `--export-ris` write citation files ready for Zotero, Mendeley, or LaTeX |
 | **Publication charts** | New **Charts** sheet in the Excel workbook: publications per year, top 10 journals, relevance-score distribution |
 
@@ -72,8 +72,9 @@ No API key required (optional for higher throughput).
 ```bash
 pip install -r requirements.txt
 
-# For AI extraction only:
-pip install anthropic
+# For AI extraction only (pick one, both are free-tier):
+pip install groq          # Groq — Llama 3.3 70B
+pip install google-generativeai  # Google Gemini
 ```
 
 ## Usage
@@ -98,10 +99,10 @@ python pubmed_miner.py --year-from 2015
 python pubmed_miner.py --queries "Erodium moschatum phytochemistry" "Reseda alba flavonoids" --year-from 2018
 ```
 
-**Enable AI extraction (requires ANTHROPIC_API_KEY):**
+**Enable AI extraction (free — uses Groq or Gemini):**
 ```bash
-$env:ANTHROPIC_API_KEY = "sk-ant-..."      # PowerShell
-python pubmed_miner.py --source both --ai-extract
+$env:GROQ_API_KEY = "gsk_..."             # PowerShell (Groq, free tier)
+python pubmed_miner.py --source both --ai-analysis
 ```
 
 **Export BibTeX and RIS alongside Excel:**
@@ -133,7 +134,7 @@ python pubmed_miner.py --no-cache
 | `--max-results N` | 50 | Maximum results fetched per query per source |
 | `--year-from YEAR` | none | Minimum publication year |
 | `--relevance-threshold N` | 60 | Minimum score for the High Relevance sheet |
-| `--ai-extract` | off | Enable Claude AI structured extraction |
+| `--ai-analysis` | off | Enable free AI structured extraction via Groq (Llama 3.3 70B) or Google Gemini |
 | `--api-key KEY` | none | NCBI API key |
 | `--cache-db FILE` | `pubmed_cache.db` | SQLite cache file path |
 | `--no-cache` | off | Bypass cache and re-fetch all records |
