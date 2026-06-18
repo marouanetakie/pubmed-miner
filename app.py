@@ -463,7 +463,7 @@ with q_col:
     queries_raw = st.text_area(
         "Search queries — one per line",
         value="",
-        placeholder="Enter one search query per line\ne.g. Erodium moschatum\ne.g. antioxidant plant extract",
+        placeholder="Enter one search query per line\ne.g. antioxidant activity plant extract\ne.g. antimicrobial medicinal plants\ne.g. anti-inflammatory natural compounds\ne.g. biological activity phenolic compounds",
         height=190,
         help="Each line is sent as a separate query. Use PubMed/Europe PMC syntax (AND, OR, [MeSH]).",
     )
