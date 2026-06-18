@@ -462,13 +462,8 @@ q_col, kw_col = st.columns([3, 2], gap="medium")
 with q_col:
     queries_raw = st.text_area(
         "Search queries — one per line",
-        value=(
-            "Erodium moschatum\n"
-            "Reseda alba\n"
-            "Moroccan medicinal plants antidiabetic\n"
-            "silver nanoparticles green synthesis antioxidant\n"
-            "UPLC-ESI-MS plant extract phenolic compounds"
-        ),
+        value="",
+        placeholder="Enter one search query per line\ne.g. Erodium moschatum\ne.g. antioxidant plant extract",
         height=190,
         help="Each line is sent as a separate query. Use PubMed/Europe PMC syntax (AND, OR, [MeSH]).",
     )
