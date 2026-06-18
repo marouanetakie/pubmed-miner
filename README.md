@@ -1,4 +1,4 @@
-# LitMiner
+# PubMed Miner
 
 ## 🌐 Live Web App
 👉 https://pubmed-miner.streamlit.app
@@ -7,7 +7,7 @@ Automated literature retrieval from **PubMed** and **Europe PMC** with relevance
 SQLite caching, free AI structured extraction (Groq / Gemini), BibTeX/RIS export, and publication charts.
 No API key required (optional for higher throughput).
 
-## What's new in v3.1 — LitMiner
+## What's new in v3.1 — PubMed Miner
 
 | Feature | Detail |
 |---|---|

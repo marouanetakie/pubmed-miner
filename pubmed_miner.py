@@ -1,5 +1,5 @@
 """
-LitMiner v3.1
+PubMed Miner v3.1
 Fetch, score, cache, and export biomedical literature from PubMed and Europe PMC.
 
 New in v3.0: Europe PMC dual-source search, SQLite result cache, Claude AI structured
